@@ -70,10 +70,10 @@ docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 \
   $IMAGE
 
 #### for eagle dev ####
-
+# 
 # docker run -it \
-#   --rm --entrypoint bash \
-#   -v ~/workspace:/Workspace \
-#   -v /dev:/dev \
-#   --privileged \
-#   jcaroswip.registry.jca/arm64/outrun:0.0.1-wip-b00005
+  # --rm --entrypoint bash \
+  # -v ~/Workspace:/Workspace \
+  # -v /dev:/dev \
+  # --privileged \
+  # jcaroswip.registry.jca/arm64/outrun:0.0.1-wip-b00005
