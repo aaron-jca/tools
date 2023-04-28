@@ -1,3 +1,4 @@
+#!/bin/bash
 ## START A NEW DOCKER CONTAINER
 
 BROWN='\033[0;33m'
@@ -30,27 +31,39 @@ drawWelcome()
   drawLine
 }
 
-NAME=n
+NAME="notInitialized"
+WORKSPACE_NAME=humble
+CLION_PATH=~/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54
+PYCHARM_PATH=~/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/223.8617.48
+JETBRAINS_PATH=~/.config/JetBrains/JetBrainsClient223.8214.51
+
+while getopts ":n:w:" o
+do	case "$o" in
+	n)	NAME=${OPTARG};;
+	w)	WORKSPACE_NAME=${OPTARG};;
+	[?])	print >&2 "Usage: $0 [-n name] [-w workspace_folder]"
+		exit 1;;
+	esac
+done
+
+echo -e "${CYAN}Workspace name: ${GREEN}${WORKSPACE_NAME}${CYAN}...${NC}"
 echo -e "\nCreating new docker container..."
-if [ $# -eq 0 ]
+if [ $NAME = "notInitialized" ]
   then
      read -p "$(echo -e $BROWN "Input container name: " $NC)" NAME
-else
-  NAME=$1
 fi
 
 echo -e "${CYAN}Creating new docker container with name: ${GREEN}${NAME}${NC}"
 echo ""
 
-
-CLION_PATH=~/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54
-PYCHARM_PATH=~/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/223.8617.48
-JETBRAINS_PATH=~/.config/JetBrains/JetBrainsClient223.8214.51
-WORKSPACE_NAME=humble
-
-# IMAGE=jcaros.registry.jca/amd64/jcaros2:0.17.2-rc-b00006 # FOXY
-# IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:0.0.1-wip-b00025 #humble build image 
 IMAGE=jcaroswip.registry.jca/amd64/outrun:0.0.1-wip-b00005 # build image for digimesh stuff
+# IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:0.0.1-wip-b00025 #humble build image 
+
+if [ $WORKSPACE_NAME = "foxy" ]
+  then
+    echo "FOXY WORKSPACE"
+    IMAGE=jcaros.registry.jca/amd64/jcaros2:0.17.2-rc-b00006 # FOXY
+fi
 
 echo -e "${CYAN}Running xhost command${NC}"
 xhost +local:docker
@@ -70,10 +83,10 @@ docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 \
   $IMAGE
 
 #### for eagle dev ####
-# 
+
 # docker run -it \
-  # --rm --entrypoint bash \
-  # -v ~/Workspace:/Workspace \
-  # -v /dev:/dev \
-  # --privileged \
-  # jcaroswip.registry.jca/arm64/outrun:0.0.1-wip-b00005
+#   --rm --entrypoint bash \
+#   -v ~/Workspace:/Workspace \
+#   -v /dev:/dev \
+#   --privileged \
+#   jcaroswip.registry.jca/arm64/outrun:0.0.1-wip-b00005
