@@ -6,7 +6,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 
-drawPgm() {
+drawPgm() { 
 echo "   ▄███████▄ ▄██   ▄    ▄████████    ▄█    █▄       ▄████████    ▄████████   ▄▄▄▄███▄▄▄▄   ";
 echo "  ███    ███ ███   ██▄ ███    ███   ███    ███     ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄ ";
 echo "  ███    ███ ███▄▄▄███ ███    █▀    ███    ███     ███    ███   ███    ███ ███   ███   ███ ";
@@ -21,7 +21,7 @@ echo "                                                                ███ 
 
 startPgm() {
 
-    exec $BASE_DIRECTORY/clion/bin/clion.sh
+    exec $BASE_DIRECTORY/pycharm/bin/pycharm.sh
 }
 
 echo -e "${CYAN}====================${NC}"

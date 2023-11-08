@@ -1,6 +1,6 @@
 
 NAME="notInitialized"
-WORKSPACE_NAME=Workspace
+WORKSPACE_NAME=base_station_testing
 
 while getopts ":n:w:" o
 do	case "$o" in
@@ -26,7 +26,8 @@ echo ""
 
 docker run -it \
   --rm --entrypoint bash \
-  -v ~/$WORKSPACE_NAME:/Workspace \
+  -v ~/base_station_testing:/Workspace \
   -v /dev:/dev \
   --privileged \
-  jcaroswip.registry.jca/arm64/outrun:0.0.1-wip-b00005
+  jcaeic/outrun:version-wip-b00016-arm64
+

@@ -46,8 +46,8 @@ do	case "$o" in
 	esac
 done
 
-echo -e "${CYAN}Workspace name: ${GREEN}${WORKSPACE_NAME}${CYAN}...${NC}"
 echo -e "\nCreating new docker container..."
+echo -e "${CYAN}Workspace name: ${GREEN}${WORKSPACE_NAME}${NC}"
 if [ $NAME = "notInitialized" ]
   then
      read -p "$(echo -e $BROWN "Input container name: " $NC)" NAME
@@ -56,15 +56,15 @@ fi
 echo -e "${CYAN}Creating new docker container with name: ${GREEN}${NAME}${NC}"
 echo ""
 
-IMAGE=jcaroswip.registry.jca/amd64/outrun:0.0.1-wip-b00005 # build image for digimesh stuff
-# IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:0.0.1-wip-b00025 #humble build image 
-
+# IMAGE=jcaroswip.registry.jca/amd64/outrun:0.0.1-field-test-b00028 # build image for digimesh stuff
+IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:0.0.1-wip-b00035 #humble build image 
 if [ $WORKSPACE_NAME = "foxy" ]
   then
     echo "FOXY WORKSPACE"
     IMAGE=jcaros.registry.jca/amd64/jcaros2:0.17.2-rc-b00006 # FOXY
 fi
 
+echo -e "${CYAN}Using image ${IMAGE}${NC}"
 echo -e "${CYAN}Running xhost command${NC}"
 xhost +local:docker
 
@@ -82,10 +82,10 @@ docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 \
   --name $NAME \
   $IMAGE
 
-#### for eagle dev ####
+### for eagle dev ####
 
 # docker run -it \
-#   --rm --entrypoint bash \
+#   --rm --entrypoint bash \  
 #   -v ~/Workspace:/Workspace \
 #   -v /dev:/dev \
 #   --privileged \

@@ -1,0 +1,494 @@
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h: In instantiation of ‘message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(C&) [with C = const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’:
+/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:298:31:   required from ‘message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(const C&) [with C = std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:131:36:   required from ‘void rclcpp::interface::Synchronizer<Policy, MessageT>::registerCallback3(std::function<void(std::shared_ptr<const M1>, std::shared_ptr<const M1>, std::shared_ptr<const M1>)>) [with Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >; MessageT = std_msgs::msg::String_<std::allocator<void> >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:127:8:   required from here
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: no matching function for call to ‘message_filters::Signal9<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType>::addCallback<const M0ConstPtr&, const M1ConstPtr&, const M2ConstPtr&, const M3ConstPtr&, const M4ConstPtr&, const M5ConstPtr&, const M6ConstPtr&, const M7ConstPtr&, const M8ConstPtr&>(std::_Bind_helper<false, const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>&, const std::_Placeholder<1>&, const std::_Placeholder<2>&, const std::_Placeholder<3>&, const std::_Placeholder<4>&, const std::_Placeholder<5>&, const std::_Placeholder<6>&, const std::_Placeholder<7>&, const std::_Placeholder<8>&, const std::_Placeholder<9>&>::type)’
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:170:14: note: candidate: ‘message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(const std::function<void(P0, P1, P2, P3, P4, P5, P6, P7, P8)>&) [with P0 = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P1 = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P2 = const std::shared_ptr<const message_filters::NullType>&; P3 = const std::shared_ptr<const message_filters::NullType>&; P4 = const std::shared_ptr<const message_filters::NullType>&; P5 = const std::shared_ptr<const message_filters::NullType>&; P6 = const std::shared_ptr<const message_filters::NullType>&; P7 = const std::shared_ptr<const message_filters::NullType>&; P8 = const std::shared_ptr<const message_filters::NullType>&; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  170 |   Connection addCallback(const std::function<void(P0, P1, P2, P3, P4, P5, P6, P7, P8)>& callback)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:170:89: note:   no known conversion for argument 1 from ‘std::_Bind_helper<false, const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>&, const std::_Placeholder<1>&, const std::_Placeholder<2>&, const std::_Placeholder<3>&, const std::_Placeholder<4>&, const std::_Placeholder<5>&, const std::_Placeholder<6>&, const std::_Placeholder<7>&, const std::_Placeholder<8>&, const std::_Placeholder<9>&>::type’ to ‘const std::function<void(const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&, const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&)>&’
+  170 |   Connection addCallback(const std::function<void(P0, P1, P2, P3, P4, P5, P6, P7, P8)>& callback)
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:180:14: note: candidate: ‘template<class P0, class P1> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1)) [with P0 = P0; P1 = P1; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  180 |   Connection addCallback(void(*callback)(P0, P1))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:180:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 2)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:180:14: note: provided for ‘template<class P0, class P1> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1)) [with P0 = P0; P1 = P1; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  180 |   Connection addCallback(void(*callback)(P0, P1))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:186:14: note: candidate: ‘template<class P0, class P1, class P2> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2)) [with P0 = P0; P1 = P1; P2 = P2; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  186 |   Connection addCallback(void(*callback)(P0, P1, P2))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:186:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 3)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:186:14: note: provided for ‘template<class P0, class P1, class P2> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2)) [with P0 = P0; P1 = P1; P2 = P2; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  186 |   Connection addCallback(void(*callback)(P0, P1, P2))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:192:14: note: candidate: ‘template<class P0, class P1, class P2, class P3> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  192 |   Connection addCallback(void(*callback)(P0, P1, P2, P3))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:192:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 4)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:192:14: note: provided for ‘template<class P0, class P1, class P2, class P3> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  192 |   Connection addCallback(void(*callback)(P0, P1, P2, P3))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:198:14: note: candidate: ‘template<class P0, class P1, class P2, class P3, class P4> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  198 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:198:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 5)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:198:14: note: provided for ‘template<class P0, class P1, class P2, class P3, class P4> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  198 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:204:14: note: candidate: ‘template<class P0, class P1, class P2, class P3, class P4, class P5> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  204 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:204:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 6)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:204:14: note: provided for ‘template<class P0, class P1, class P2, class P3, class P4, class P5> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  204 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:210:14: note: candidate: ‘template<class P0, class P1, class P2, class P3, class P4, class P5, class P6> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5, P6)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  210 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:210:14: note:   template argument deduction/substitution failed:
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 7)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:210:14: note: provided for ‘template<class P0, class P1, class P2, class P3, class P4, class P5, class P6> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5, P6)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  210 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6))
+      |              ^~~~~~~~~~~
+In file included from /opt/ros/humble/include/message_filters/message_filters/synchronizer.h:47,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/internal/containerized_synchronizer.hpp:12,
+                 from /Workspace/src/jca_node_interfaces/include/interfaces/examples/containerized_synchronizer/containerized_synchronizer.hpp:8,
+                 from /Workspace/src/jca_node_interfaces/src/examples/containerized_synchronizer/containerized_synchronizer.cpp:5:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:216:14: note: candidate: ‘template<class P0, class P1, class P2, class P3, class P4, class P5, class P6, class P7> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5, P6, P7)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; P7 = P7; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  216 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6, P7))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:216:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 8)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:216:14: note: provided for ‘template<class P0, class P1, class P2, class P3, class P4, class P5, class P6, class P7> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5, P6, P7)) [with P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; P7 = P7; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  216 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6, P7))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:222:14: note: candidate: ‘message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (*)(P0, P1, P2, P3, P4, P5, P6, P7, P8)) [with P0 = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P1 = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P2 = const std::shared_ptr<const message_filters::NullType>&; P3 = const std::shared_ptr<const message_filters::NullType>&; P4 = const std::shared_ptr<const message_filters::NullType>&; P5 = const std::shared_ptr<const message_filters::NullType>&; P6 = const std::shared_ptr<const message_filters::NullType>&; P7 = const std::shared_ptr<const message_filters::NullType>&; P8 = const std::shared_ptr<const message_filters::NullType>&; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  222 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6, P7, P8))
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:222:32: note:   no known conversion for argument 1 from ‘std::_Bind_helper<false, const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>&, const std::_Placeholder<1>&, const std::_Placeholder<2>&, const std::_Placeholder<3>&, const std::_Placeholder<4>&, const std::_Placeholder<5>&, const std::_Placeholder<6>&, const std::_Placeholder<7>&, const std::_Placeholder<8>&, const std::_Placeholder<9>&>::type’ to ‘void (*)(const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&, const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&, const std::shared_ptr<const message_filters::NullType>&)’
+  222 |   Connection addCallback(void(*callback)(P0, P1, P2, P3, P4, P5, P6, P7, P8))
+      |                          ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:228:14: note: candidate: ‘template<class T, class P0, class P1> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1), T*) [with T = T; P0 = P0; P1 = P1; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  228 |   Connection addCallback(void(T::*callback)(P0, P1), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:228:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 3)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:228:14: note: provided for ‘template<class T, class P0, class P1> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1), T*) [with T = T; P0 = P0; P1 = P1; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  228 |   Connection addCallback(void(T::*callback)(P0, P1), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:234:14: note: candidate: ‘template<class T, class P0, class P1, class P2> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  234 |   Connection addCallback(void(T::*callback)(P0, P1, P2), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:234:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 4)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:234:14: note: provided for ‘template<class T, class P0, class P1, class P2> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  234 |   Connection addCallback(void(T::*callback)(P0, P1, P2), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:240:14: note: candidate: ‘template<class T, class P0, class P1, class P2, class P3> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  240 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:240:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 5)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:240:14: note: provided for ‘template<class T, class P0, class P1, class P2, class P3> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  240 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:246:14: note: candidate: ‘template<class T, class P0, class P1, class P2, class P3, class P4> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  246 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:246:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 6)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:246:14: note: provided for ‘template<class T, class P0, class P1, class P2, class P3, class P4> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  246 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:252:14: note: candidate: ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4, P5), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  252 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4, P5), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:252:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 7)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:252:14: note: provided for ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4, P5), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  252 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4, P5), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:258:14: note: candidate: ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5, class P6> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4, P5, P6), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  258 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4, P5, P6), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:258:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 8)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:258:14: note: provided for ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5, class P6> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4, P5, P6), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  258 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4, P5, P6), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:264:14: note: candidate: ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5, class P6, class P7> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(void (T::*)(P0, P1, P2, P3, P4, P5, P6, P7), T*) [with T = T; P0 = P0; P1 = P1; P2 = P2; P3 = P3; P4 = P4; P5 = P5; P6 = P6; P7 = P7; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  264 |   Connection addCallback(void(T::*callback)(P0, P1, P2, P3, P4, P5, P6, P7), T* t)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:264:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h: In substitution of ‘template<class T, class P0, class P1, class P2, class P3, class P4, class P5, class P6, class P7> message_filters::Connection message_filters::Signal9<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType>::addCallback<T, P0, P1, P2, P3, P4, P5, P6, P7>(void (T::*)(P0, P1, P2, P3, P4, P5, P6, P7), T*) [with T = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P0 = const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&; P1 = const std::shared_ptr<const message_filters::NullType>&; P2 = const std::shared_ptr<const message_filters::NullType>&; P3 = const std::shared_ptr<const message_filters::NullType>&; P4 = const std::shared_ptr<const message_filters::NullType>&; P5 = const std::shared_ptr<const message_filters::NullType>&; P6 = const std::shared_ptr<const message_filters::NullType>&; P7 = const std::shared_ptr<const message_filters::NullType>&]’:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40:   required from ‘message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(C&) [with C = const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:298:31:   required from ‘message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(const C&) [with C = std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:131:36:   required from ‘void rclcpp::interface::Synchronizer<Policy, MessageT>::registerCallback3(std::function<void(std::shared_ptr<const M1>, std::shared_ptr<const M1>, std::shared_ptr<const M1>)>) [with Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >; MessageT = std_msgs::msg::String_<std::allocator<void> >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:127:8:   required from here
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:264:14: error: forming pointer to reference type ‘const std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >&’
+/opt/ros/humble/include/message_filters/message_filters/signal9.h: In instantiation of ‘message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(C&) [with C = const std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’:
+/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:298:31:   required from ‘message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(const C&) [with C = std::_Bind<std::function<void(std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >, std::shared_ptr<const std_msgs::msg::String_<std::allocator<void> > >)>(std::_Placeholder<1>, std::_Placeholder<2>, std::_Placeholder<3>)>; Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:131:36:   required from ‘void rclcpp::interface::Synchronizer<Policy, MessageT>::registerCallback3(std::function<void(std::shared_ptr<const M1>, std::shared_ptr<const M1>, std::shared_ptr<const M1>)>) [with Policy = message_filters::sync_policies::ApproximateTime<std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> > >; MessageT = std_msgs::msg::String_<std::allocator<void> >]’
+/Workspace/src/jca_node_interfaces/include/interfaces/rclcpp/synchronizer.hpp:127:8:   required from here
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:270:14: note: candidate: ‘template<class C> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(C&) [with C = C; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  270 |   Connection addCallback( C& callback)
+      |              ^~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:270:14: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:280:40: error: wrong number of template arguments (9, should be 1)
+  272 |     return addCallback<const M0ConstPtr&,
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |                      const M1ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  274 |                      const M2ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  275 |                      const M3ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  276 |                      const M4ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  277 |                      const M5ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  278 |                      const M6ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  279 |                      const M7ConstPtr&,
+      |                      ~~~~~~~~~~~~~~~~~~ 
+  280 |                      const M8ConstPtr&>(std::bind(callback, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6, std::placeholders::_7, std::placeholders::_8, std::placeholders::_9));
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/humble/include/message_filters/message_filters/signal9.h:270:14: note: provided for ‘template<class C> message_filters::Connection message_filters::Signal9<M0, M1, M2, M3, M4, M5, M6, M7, M8>::addCallback(C&) [with C = C; M0 = std_msgs::msg::String_<std::allocator<void> >; M1 = std_msgs::msg::String_<std::allocator<void> >; M2 = message_filters::NullType; M3 = message_filters::NullType; M4 = message_filters::NullType; M5 = message_filters::NullType; M6 = message_filters::NullType; M7 = message_filters::NullType; M8 = message_filters::NullType]’
+  270 |   Connection addCallback( C& callback)
+      |              ^~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/jca_node_interfaces.dir/build.make:202: CMakeFiles/jca_node_interfaces.dir/src/examples/containerized_synchronizer/containerized_synchronizer.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/jca_node_interfaces.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< jca_node_interfaces [8.21s, exited with code 2]
