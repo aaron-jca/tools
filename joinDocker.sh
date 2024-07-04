@@ -26,16 +26,20 @@ drawWelcome()
   drawLine
 }
 
-docker ps
+NAME="notInitialized"
+while getopts ":n:i:" o
+do	case "$o" in
+	n)	NAME=${OPTARG};;
+	[?])	print >&2 "Usage: $0 [-n name]"
+		exit 1;;
+	esac
+done
 
-echo ""
-
-NAME=n
-if [ $# -eq 0 ]
+if [ $NAME = "notInitialized" ]
   then
-     read -p "$(echo -e $BROWN "What container do you want to join? " $NC)" NAME
-else
-  NAME=$1
+    docker ps
+    echo "" # spacing
+    read -p "$(echo -e $BROWN "What container do you want to join? " $NC)" NAME
 fi
 
 echo -e "${CYAN}Joining docker container: ${GREEN}${NAME}${NC}"

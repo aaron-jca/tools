@@ -33,15 +33,16 @@ drawWelcome()
 
 NAME="notInitialized"
 WORKSPACE_NAME=humble
-CLION_PATH=~/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54
+CLION_PATH=/home/asalo/.local/share/JetBrains/ # apps/CLion/ch-0/223.8617.54 # move this up to toolbox directory to keep plugins and such
 PYCHARM_PATH=~/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/223.8617.48
-JETBRAINS_PATH=~/.config/JetBrains/JetBrainsClient223.8214.51
+JETBRAINS_PATH=~/.config/JetBrains/
+IMAGE="notInitialized" #humble build image 
 
-while getopts ":n:w:" o
+while getopts ":n:i:" o
 do	case "$o" in
 	n)	NAME=${OPTARG};;
-	w)	WORKSPACE_NAME=${OPTARG};;
-	[?])	print >&2 "Usage: $0 [-n name] [-w workspace_folder]"
+	i)	IMAGE=${OPTARG};;
+	[?])	print >&2 "Usage: $0 [-n name] [-i image]"
 		exit 1;;
 	esac
 done
@@ -56,15 +57,14 @@ fi
 echo -e "${CYAN}Creating new docker container with name: ${GREEN}${NAME}${NC}"
 echo ""
 
-# IMAGE=jcaroswip.registry.jca/amd64/outrun:0.0.1-field-test-b00028 # build image for digimesh stuff
-IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:0.0.1-wip-b00035 #humble build image 
-if [ $WORKSPACE_NAME = "foxy" ]
+# IMAGE=jcaroswip.registry.jca/amd64/jcaros2-deploy:0.0.1-ROS-1129-further-optimizations-b00037
+# IMAGE=jcaroswip.registry.jca/amd64/jcaros2-deploy:0.0.1-ROS-1129-b00031 # FOXY
+if [ $IMAGE = "notInitialized" ]
   then
-    echo "FOXY WORKSPACE"
-    IMAGE=jcaros.registry.jca/amd64/jcaros2:0.17.2-rc-b00006 # FOXY
+    IMAGE=jcaroswip.registry.jca/amd64/jcaros2-build:3.0.1-wip-b00090 #humble build image 
 fi
 
-echo -e "${CYAN}Using image ${IMAGE}${NC}"
+echo -e "${CYAN}Using image ${BLUE}${IMAGE}${NC}"
 echo -e "${CYAN}Running xhost command${NC}"
 xhost +local:docker
 
@@ -74,7 +74,7 @@ docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 \
   --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
   --device /dev/dri --net=host --rm --entrypoint bash \
   --privileged \
-  -v $CLION_PATH:/clion \
+  -v $CLION_PATH:/root/.local/share/JetBrains \
   -v $PYCHARM_PATH:/pycharm \
   -v $JETBRAINS_PATH:/root/.config/JetBrains \
   -v ~/$WORKSPACE_NAME:/Workspace \

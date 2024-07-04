@@ -19,6 +19,11 @@ colourCountC2=0
 colourChangeC1=100
 colourChangeC2=100
 
+export PATH="/usr/bin/python3:$PATH"
+export PATH="./.local/lib/python3.10/site-packages:$PATH"
+
+echo "Running with Python version: $(python3 --version)"
+echo "PATH: $PATH"
 chooseColorC1() {
     r=$(( ( RANDOM % 8 )  + 1 ))
     case $r in
@@ -116,7 +121,7 @@ chooseColorC2
 
 while true
 do
-    python3 /home/asalo/tools/graphics/drawCube.py
+    /usr/bin/python3 /home/asalo/tools/graphics/drawCube.py
     # sleep 0.3
     # drawLine+
     # if [ $pos -lt $minPos ]

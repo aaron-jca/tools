@@ -1,0 +1,6 @@
+{"header":
+    {"frame_id":"FrameIdTest",
+    "stamp":{"nanosec":1234,
+            "sec":5678}},
+"source":1, "speed":1234.45, "status":1, "valid":false, "variance":0.0
+}

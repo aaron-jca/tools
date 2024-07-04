@@ -84,7 +84,7 @@ chooseColor() {
 }
 startPgm() {
 
-    exec $BASE_DIRECTORY/clion/bin/clion.sh
+    exec $BASE_DIRECTORY/.local/share/JetBrains/Toolbox/apps/clion/bin/clion.sh 
 }
 
 echo -e "${CYAN}====================${NC}"
